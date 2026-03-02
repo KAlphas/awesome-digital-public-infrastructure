@@ -57,6 +57,7 @@ The main reference points for anyone working on DPI or evaluating DPGs.
 ### 🏗️ DPI Core Frameworks
 
 - [UNDP Digital Public Goods Standard](https://digitalpublicgoods.net/standard/) — nine criteria a solution must meet to be certified as a DPG
+- [DPGA DPGs for DPI Collection](https://www.digitalpublicgoods.net/collections/coll-dpi) — curated set of certified DPGs mapped to the four DPI use cases: identity, payments, data exchange, and government transfers
 - [GovStack Reference Architecture](https://specs.govstack.global/) — a building-block model for assembling government digital services
 - [ITU Digital Transformation Framework](https://www.itu.int/en/ITU-D/Pages/default.aspx) — guidelines and metrics from the ITU for national digital transformation
 - [OECD Digital Government Policy Framework](https://www.oecd.org/governance/digital-government/oecd-digital-government-policy-framework.htm) — six dimensions for assessing how mature a country's digital government is
