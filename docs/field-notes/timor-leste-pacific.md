@@ -6,7 +6,6 @@
 
 - **📶 Start with what works, not what's ideal.** In fragile states, KoboToolbox running on 3G beats a complex HMIS that needs a reliable server and trained IT staff. Build up from there.
 - **🤝 The technology is the easy part.** Getting four ministries to agree on a common data schema took longer than building the entire pipeline. Budget time for this — seriously.
-- **🔑 Agree on identifiers before you start.** Cycle IDs like `MSSI_2026_q1` need to match across the form, the pipeline, and the reporting logic from day one. Fixing this later is painful and expensive.
 - **📄 Always design for PDF.** Even with a live dashboard, senior government officials will ask for a PDF by email. Both channels need to work.
 - **🌊 The Pacific is not one context.** Fourteen island nations spread across millions of km² means offline-capable tools, cross-jurisdiction data agreements, and very limited local technical capacity. Generic solutions rarely fit.
 
