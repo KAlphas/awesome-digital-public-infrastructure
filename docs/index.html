@@ -405,6 +405,145 @@
     }
     .fn-more:hover { background: var(--blue); color: #fff; }
 
+    /* ── LINK GRID (frameworks) ────────────────────── */
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--hellamaa);
+      border: 1px solid var(--hellamaa);
+      margin-bottom: 12px;
+    }
+    .link-item {
+      background: #fff;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .link-item:hover { background: var(--pahkla); }
+    .link-item:hover .link-title { color: var(--blue); }
+    .link-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+    .link-org {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+    .link-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 1px 6px;
+      background: var(--blue);
+      color: #fff;
+    }
+    .link-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      transition: color 0.15s;
+    }
+    .link-desc {
+      font-size: 0.79rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── PAPER LIST ─────────────────────────────────── */
+    .paper-list {
+      border: 1px solid var(--hellamaa);
+      border-top: 3px solid var(--blue);
+      margin-bottom: 12px;
+    }
+    .paper-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--hellamaa);
+      transition: background 0.15s;
+    }
+    .paper-item:last-child { border-bottom: none; }
+    .paper-item:hover { background: var(--pahkla); }
+    .paper-item:hover .paper-title { color: var(--blue); }
+    .paper-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+      width: 68px;
+      text-align: center;
+      padding-top: 2px;
+    }
+    .paper-org {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      background: var(--blue);
+      padding: 2px 6px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .paper-year {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .paper-right { flex: 1; min-width: 0; }
+    .paper-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      transition: color 0.15s;
+    }
+    .paper-desc {
+      font-size: 0.79rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .paper-icon {
+      font-size: 0.8rem;
+      color: var(--hellamaa);
+      flex-shrink: 0;
+      margin-top: 4px;
+      transition: color 0.15s;
+    }
+    .paper-item:hover .paper-icon { color: var(--blue); }
+
+    /* ── SEE MORE LINK ──────────────────────────────── */
+    .see-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 8px 0;
+    }
+    .see-more:hover { color: var(--blue-dk); }
+    .see-more i { font-size: 0.7rem; }
+
     /* ── CONTRIBUTE STRIP ──────────────────────────── */
     .contribute-strip {
       background: var(--yellow);
@@ -454,6 +593,25 @@
     footer a { color: var(--yellow); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
+    /* ── ACCESSIBILITY / FOCUS ─────────────────────── */
+    :focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 2px;
+    }
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
@@ -465,6 +623,8 @@
   </style>
 </head>
 <body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <!-- ── HERO ─────────────────────────────────────────── -->
 <header class="hero">
@@ -512,7 +672,7 @@
 </div>
 
 <!-- ── MAIN ──────────────────────────────────────────── -->
-<main>
+<main id="main-content">
 
   <!-- DOMAINS -->
   <section class="section">
@@ -580,16 +740,160 @@
     </div>
   </section>
 
-  <!-- QUICK LINKS -->
+  <!-- FRAMEWORKS -->
   <section class="section">
-    <h2><i class="fa-solid fa-compass"></i> Quick Links</h2>
-    <div class="card-grid">
-      <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-frameworks--standards">
-        <div class="card-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-        <h3>Frameworks & Standards</h3>
-        <p>UNDP DPG Standard, GovStack, ITU, OECD, World Bank, Co-Develop.</p>
-        <span class="tag">7 resources</span>
+    <h2><i class="fa-solid fa-ruler-combined"></i> Key DPI Frameworks</h2>
+    <div class="link-grid">
+      <a class="link-item" href="https://digitalpublicgoods.net/standard/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">DPGA</span>
+          <span class="link-tag">Certification</span>
+        </div>
+        <div class="link-title">DPG Standard</div>
+        <div class="link-desc">Nine criteria a solution must meet to be certified as a Digital Public Good.</div>
       </a>
+      <a class="link-item" href="https://specs.govstack.global/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">GovStack</span>
+          <span class="link-tag">Architecture</span>
+        </div>
+        <div class="link-title">GovStack Reference Architecture</div>
+        <div class="link-desc">Building-block model for assembling interoperable government digital services.</div>
+      </a>
+      <a class="link-item" href="https://digitalprinciples.org/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">DIAL / 300+ orgs</span>
+          <span class="link-tag">Principles</span>
+        </div>
+        <div class="link-title">Principles for Digital Development</div>
+        <div class="link-desc">Nine principles adopted by 300+ organizations for technology in development.</div>
+      </a>
+      <a class="link-item" href="https://www.co-develop.net/dpi-safeguards" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">Co-Develop</span>
+          <span class="link-tag">Safeguards</span>
+        </div>
+        <div class="link-title">DPI Safeguards Framework</div>
+        <div class="link-desc">Rights-based guidance for designing DPI that protects people, not just systems.</div>
+      </a>
+      <a class="link-item" href="https://www.oecd.org/governance/digital-government/oecd-digital-government-policy-framework.htm" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">OECD</span>
+          <span class="link-tag">Policy</span>
+        </div>
+        <div class="link-title">Digital Government Policy Framework</div>
+        <div class="link-desc">Six dimensions for assessing digital government maturity across member countries.</div>
+      </a>
+      <a class="link-item" href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">EU</span>
+          <span class="link-tag">Regulation</span>
+        </div>
+        <div class="link-title">EU AI Act</div>
+        <div class="link-desc">World's first comprehensive AI regulation — risk-based, binding for EU, reference globally.</div>
+      </a>
+      <a class="link-item" href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">UNESCO</span>
+          <span class="link-tag">Ethics</span>
+        </div>
+        <div class="link-title">Recommendation on AI Ethics</div>
+        <div class="link-desc">Only global normative framework on AI ethics, adopted by all 193 UNESCO member states.</div>
+      </a>
+      <a class="link-item" href="https://x-road.global/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">NIIS</span>
+          <span class="link-tag">Interoperability</span>
+        </div>
+        <div class="link-title">X-Road</div>
+        <div class="link-desc">Open-source data exchange backbone powering Estonia and 40+ countries. MIT licensed.</div>
+      </a>
+    </div>
+    <a class="see-more" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-frameworks--standards">
+      All frameworks on GitHub <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </section>
+
+  <!-- PAPERS -->
+  <section class="section">
+    <h2><i class="fa-solid fa-book-open"></i> Key Papers & Reports</h2>
+    <div class="paper-list">
+      <a class="paper-item" href="https://documents1.worldbank.org/curated/en/099031025172027713/pdf/P505739-84c5073b-9d40-4b83-a211-98b2263e87dd.pdf" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">World Bank</span>
+          <span class="paper-year">2025</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">Digital Public Infrastructure and Development: A World Bank Group Approach</div>
+          <div class="paper-desc">The definitive WBG position paper on DPI strategy, investment, and implementation. Vol. 1 of the Digital Transformation White Paper series.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www.co-develop.net/dpi-moonshot" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">Co-Develop</span>
+          <span class="paper-year">2022</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">DPI: A Moonshot for Equitable Growth</div>
+          <div class="paper-desc">The founding case for DPI as the key lever for inclusive economic development in low-income countries.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www3.weforum.org/docs/WEF_Rethinking_Digital_Public_Infrastructure.pdf" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">WEF</span>
+          <span class="paper-year">2023</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">Rethinking Digital Public Infrastructure</div>
+          <div class="paper-desc">WEF analysis of DPI governance models, private-public collaboration, and risks of capture.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www.bu.edu/gdp/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">BU GDP</span>
+          <span class="paper-year">2023</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">The Case for a New Digital Bretton Woods</div>
+          <div class="paper-desc">Boston University Global Development Policy Center on multilateral coordination for fair DPI governance.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://dhis2.org/impact/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">DHIS2</span>
+          <span class="paper-year">2024</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">30 Years of Health Information Infrastructure</div>
+          <div class="paper-desc">Impact evidence from 100+ country deployments — the canonical case study for open-source DPI at scale.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://indiastack.org/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">iSPIRT</span>
+          <span class="paper-year">2024</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">India Stack Impact Report</div>
+          <div class="paper-desc">1.3B digital identities, $2T+ in UPI transactions — the most documented DPI outcome in history.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+    </div>
+    <a class="see-more" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-research--reports">
+      All papers on GitHub <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </section>
+
+  <!-- MORE RESOURCES -->
+  <section class="section">
+    <h2><i class="fa-solid fa-compass"></i> More Resources</h2>
+    <div class="card-grid">
       <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-toolkits--assessment-frameworks">
         <div class="card-icon"><i class="fa-solid fa-toolbox"></i></div>
         <h3>Toolkits & Assessment</h3>
@@ -601,12 +905,6 @@
         <h3>Organizations</h3>
         <p>DPGA, UNICEF, UNDP, DIAL, Digital Square, Co-Develop, and more.</p>
         <span class="tag">15+ orgs</span>
-      </a>
-      <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-research--reports">
-        <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
-        <h3>Research & Reports</h3>
-        <p>Foundational papers, impact studies, policy briefs from leading institutions.</p>
-        <span class="tag">10+ papers</span>
       </a>
       <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-courses--learning">
         <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
@@ -702,17 +1000,29 @@
 <!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
-    <span>
-      Made with ❤️ in the 🐊 island &nbsp;·&nbsp;
-      <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">GitHub</a> &nbsp;·&nbsp;
-      <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">Contribute</a> &nbsp;·&nbsp;
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 License</a>
-    </span>
-    <span>
-      <i class="fa-brands fa-font-awesome"></i> Font Awesome &nbsp;·&nbsp;
-      DPGs certified by <a href="https://digitalpublicgoods.net">DPGA</a> &nbsp;·&nbsp;
-      Typeface: <a href="https://brand.estonia.ee">Aino / Brand Estonia</a>
-    </span>
+    <div>
+      <div style="margin-bottom:8px;">
+        Made with ❤️ in the 🐊 island &nbsp;·&nbsp;
+        <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">GitHub</a> &nbsp;·&nbsp;
+        <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">Contribute</a> &nbsp;·&nbsp;
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 License</a>
+      </div>
+      <div style="font-size:0.76rem;opacity:0.55;">
+        <i class="fa-brands fa-font-awesome"></i> Icons: Font Awesome &nbsp;·&nbsp;
+        DPGs certified by <a href="https://digitalpublicgoods.net">DPGA</a>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div style="margin-bottom:6px;font-size:0.78rem;opacity:0.7;">Design system</div>
+      <a href="https://brand.estonia.ee" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;color:var(--yellow);font-weight:700;font-size:0.85rem;text-decoration:none;">
+        🇪🇪 Brand Estonia
+      </a>
+      <div style="font-size:0.72rem;opacity:0.5;margin-top:4px;">
+        Aino typeface · Estonian colour palette<br>
+        <a href="https://toolbox.estonia.ee" target="_blank" rel="noopener">toolbox.estonia.ee</a>
+      </div>
+    </div>
   </div>
 </footer>
 
