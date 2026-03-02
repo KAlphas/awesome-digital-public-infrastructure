@@ -64,6 +64,7 @@ The main reference points for anyone working on DPI or evaluating DPGs.
 - [Co-Develop DPI Framework](https://www.co-develop.net/) — practical guidance for countries designing their own DPI
 - [Principles for Digital Development](https://digitalprinciples.org/) — nine principles adopted by 300+ organizations working in tech and development
 - [DPI Safeguards Framework](https://www.co-develop.net/dpi-safeguards) — rights-based guidance for DPI design
+- [IDEA International — DPI & Democracy](https://www.idea.int/theme/digital-public-infrastructure) — how DPI shapes electoral integrity, civic participation, and democratic governance
 
 ### 🤖 AI & Emerging Technology
 

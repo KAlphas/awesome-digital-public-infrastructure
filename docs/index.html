@@ -359,6 +359,8 @@
     .field-notes-box {
       border: 1px solid var(--hellamaa);
       border-top: 4px solid var(--blue);
+      border-radius: 12px;
+      overflow: hidden;
     }
     .field-notes-box .fn-header {
       background: var(--pahkla);
@@ -413,22 +415,22 @@
     .link-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1px;
-      background: var(--hellamaa);
-      border: 1px solid var(--hellamaa);
+      gap: 16px;
       margin-bottom: 12px;
     }
     .link-item {
       background: #fff;
+      border: 1px solid var(--hellamaa);
+      border-radius: 12px;
       padding: 20px;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
       gap: 6px;
-      transition: background 0.15s;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-    .link-item:hover { background: var(--pahkla); }
+    .link-item:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-2px); }
     .link-item:hover .link-title { color: var(--blue); }
     .link-meta {
       display: flex;
@@ -468,6 +470,8 @@
     .paper-list {
       border: 1px solid var(--hellamaa);
       border-top: 3px solid var(--blue);
+      border-radius: 12px;
+      overflow: hidden;
       margin-bottom: 12px;
     }
     .paper-item {
@@ -814,6 +818,14 @@
         <div class="link-title">X-Road</div>
         <div class="link-desc">Open-source data exchange backbone powering Estonia and 40+ countries. MIT licensed.</div>
       </a>
+      <a class="link-item" href="https://www.idea.int/theme/digital-public-infrastructure" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">IDEA International</span>
+          <span class="link-tag">Democracy</span>
+        </div>
+        <div class="link-title">DPI & Democracy</div>
+        <div class="link-desc">How Digital Public Infrastructure shapes electoral integrity, civic participation, and democratic governance worldwide.</div>
+      </a>
     </div>
     <a class="see-more" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-frameworks--standards">
       All frameworks on GitHub <i class="fa-solid fa-arrow-right"></i>
@@ -997,7 +1009,7 @@
       <h2><i class="fa-solid fa-code-pull-request"></i> Contribute</h2>
       <p>Know a DPG, framework, or implementation that should be here? Open an issue or submit a pull request.</p>
     </div>
-    <a class="btn btn-dark" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
+    <a class="btn btn-yellow" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
       <i class="fa-solid fa-plus"></i> Add a Resource
     </a>
   </div>
