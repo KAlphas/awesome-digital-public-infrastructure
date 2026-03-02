@@ -157,7 +157,8 @@
 
     /* ── STATS BAR ─────────────────────────────────── */
     .stats {
-      background: var(--text);
+      background: #fff;
+      border-bottom: 1px solid var(--hellamaa);
       padding: 0 24px;
     }
     .stats-inner {
@@ -168,21 +169,21 @@
       flex-wrap: wrap;
     }
     .stat {
-      padding: 20px 32px 20px 0;
+      padding: 28px 40px 28px 0;
       text-align: left;
-      border-right: 1px solid rgba(255,255,255,0.12);
-      margin-right: 32px;
+      border-right: 1px solid var(--hellamaa);
+      margin-right: 40px;
     }
     .stat:last-child { border-right: none; margin-right: 0; }
     .stat strong {
       display: block;
       font-family: 'Aino Headline', 'Aino', sans-serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 900;
-      color: var(--yellow);
+      color: var(--blue);
       line-height: 1;
     }
-    .stat span { font-size: 0.8rem; color: rgba(255,255,255,0.65); letter-spacing: 0.03em; }
+    .stat span { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.03em; margin-top: 4px; display: block; }
 
     /* ── FEATURED RESOURCE ─────────────────────────── */
     .featured-wrap {
@@ -246,30 +247,31 @@
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1px;
-      background: var(--hellamaa);
-      border: 1px solid var(--hellamaa);
+      gap: 16px;
     }
     .card {
       background: #fff;
-      padding: 20px;
+      border: 1px solid var(--hellamaa);
+      border-radius: 12px;
+      padding: 22px;
       text-decoration: none;
       color: inherit;
-      transition: background 0.15s;
+      transition: box-shadow 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-    .card:hover { background: var(--pahkla); }
+    .card:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-3px); }
     .card-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--blue);
+      width: 40px;
+      height: 40px;
+      background: var(--ratva);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.95rem;
-      color: #fff;
+      font-size: 1rem;
+      color: var(--blue);
       margin-bottom: 8px;
       flex-shrink: 0;
     }
@@ -281,9 +283,10 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 2px 6px;
+      padding: 2px 10px;
       background: var(--ratva);
       color: var(--blue);
+      border-radius: 20px;
       align-self: flex-start;
       margin-top: 4px;
     }
@@ -292,19 +295,19 @@
     .country-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 1px;
-      background: var(--hellamaa);
-      border: 1px solid var(--hellamaa);
+      gap: 16px;
     }
     .country-card {
       background: #fff;
+      border: 1px solid var(--hellamaa);
+      border-radius: 12px;
       padding: 24px;
       text-decoration: none;
       color: inherit;
-      transition: background 0.15s;
+      transition: box-shadow 0.2s, transform 0.2s;
       display: block;
     }
-    .country-card:hover { background: var(--pahkla); }
+    .country-card:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-3px); }
     .country-card .flag { font-size: 2rem; margin-bottom: 10px; display: block; }
     .country-card h3 {
       font-size: 1rem;
@@ -315,33 +318,34 @@
     .country-card p { font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; }
     .country-card .chips { display: flex; flex-wrap: wrap; gap: 4px; }
     .chip {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 2px 7px;
-      background: var(--soomaa);
-      color: #1d4432;
+      padding: 3px 8px;
+      background: var(--ratva);
+      color: var(--blue-dk);
+      border-radius: 3px;
     }
 
     /* ── DOMAIN GRID ───────────────────────────────── */
     .domain-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1px;
-      background: var(--hellamaa);
-      border: 1px solid var(--hellamaa);
+      gap: 10px;
     }
     .domain-pill {
       background: #fff;
+      border: 1px solid var(--hellamaa);
+      border-radius: 10px;
       padding: 18px 12px;
       text-align: center;
       text-decoration: none;
       color: var(--text);
-      transition: background 0.15s, color 0.15s;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
       display: block;
     }
-    .domain-pill:hover { background: var(--blue); color: #fff; }
+    .domain-pill:hover { background: var(--blue); color: #fff; box-shadow: 0 4px 16px rgba(0,0,240,0.2); }
     .domain-pill:hover i { color: #fff; }
     .domain-pill i {
       display: block;
@@ -546,8 +550,8 @@
 
     /* ── CONTRIBUTE STRIP ──────────────────────────── */
     .contribute-strip {
-      background: var(--yellow);
-      padding: 40px 24px;
+      background: var(--blue);
+      padding: 56px 24px;
     }
     .contribute-strip-inner {
       max-width: 900px;
@@ -561,24 +565,26 @@
     .contribute-strip h2 {
       border-bottom: none;
       padding-bottom: 0;
-      margin-bottom: 4px;
-      font-size: 1.1rem;
-      color: var(--text);
-    }
-    .contribute-strip h2 i { color: var(--text); }
-    .contribute-strip p { font-size: 0.88rem; color: var(--muted); max-width: 420px; }
-    .btn-dark {
-      background: var(--text);
+      margin-bottom: 8px;
+      font-size: 1.4rem;
       color: #fff;
-      border-color: var(--text);
     }
-    .btn-dark:hover { background: var(--blue); border-color: var(--blue); }
+    .contribute-strip h2 i { color: rgba(255,255,255,0.7); }
+    .contribute-strip p { font-size: 0.92rem; color: rgba(255,255,255,0.75); max-width: 420px; }
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--text);
+      border-color: var(--yellow);
+      font-weight: 700;
+      border-radius: 6px;
+    }
+    .btn-yellow:hover { background: #fff; border-color: #fff; color: var(--blue); }
 
     /* ── FOOTER ────────────────────────────────────── */
     footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.6);
-      padding: 28px 24px;
+      background: #0a0a1e;
+      color: rgba(255,255,255,0.55);
+      padding: 36px 24px;
       font-size: 0.82rem;
     }
     footer .footer-inner {
