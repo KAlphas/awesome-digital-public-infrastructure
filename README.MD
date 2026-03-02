@@ -1,6 +1,6 @@
 # Awesome Digital Public Infrastructure 
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md) [![Last Updated](https://img.shields.io/github/last-commit/paulo-amaral/awesome-digital-public-infrastructure)](../../commits/main) [![Latest Release](https://img.shields.io/github/v/release/paulo-amaral/awesome-digital-public-infrastructure?label=release)](https://github.com/paulo-amaral/awesome-digital-public-infrastructure/releases) [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-orange?style=flat&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/pauloamaral)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md) [![Last Updated](https://img.shields.io/github/last-commit/paulo-amaral/awesome-digital-public-infrastructure)](https://github.com/paulo-amaral/awesome-digital-public-infrastructure/commits/main) [![Latest Release](https://img.shields.io/github/v/release/paulo-amaral/awesome-digital-public-infrastructure?label=release)](https://github.com/paulo-amaral/awesome-digital-public-infrastructure/releases) [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-orange?style=flat&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/paulosecur5)
 
 A list of Digital Public Infrastructure (DPI) and Digital Public Goods (DPG) resources I've found useful — tools, frameworks, country implementations, and things I've learned working in the field.
 
@@ -57,13 +57,14 @@ The main reference points for anyone working on DPI or evaluating DPGs.
 ### 🏗️ DPI Core Frameworks
 
 - [UNDP Digital Public Goods Standard](https://digitalpublicgoods.net/standard/) — nine criteria a solution must meet to be certified as a DPG
-- [GovStack Reference Architecture](https://www.govstack.global/our-work/technical-specifications/) — a building-block model for assembling government digital services
+- [GovStack Reference Architecture](https://specs.govstack.global/) — a building-block model for assembling government digital services
 - [ITU Digital Transformation Framework](https://www.itu.int/en/ITU-D/Pages/default.aspx) — guidelines and metrics from the ITU for national digital transformation
 - [OECD Digital Government Policy Framework](https://www.oecd.org/governance/digital-government/oecd-digital-government-policy-framework.htm) — six dimensions for assessing how mature a country's digital government is
 - [World Bank DPI Framework](https://www.worldbank.org/en/topic/digitaldevelopment) — policy and investment guidance for national digital infrastructure
 - [Co-Develop DPI Framework](https://www.co-develop.net/) — practical guidance for countries designing their own DPI
 - [Principles for Digital Development](https://digitalprinciples.org/) — nine principles adopted by 300+ organizations working in tech and development
 - [DPI Safeguards Framework](https://www.co-develop.net/dpi-safeguards) — rights-based guidance for DPI design
+- [IDEA International — DPI & Democracy](https://www.idea.int/theme/digital-public-infrastructure) — how DPI shapes electoral integrity, civic participation, and democratic governance
 
 ### 🤖 AI & Emerging Technology
 
@@ -88,7 +89,7 @@ The main reference points for anyone working on DPI or evaluating DPGs.
 
 ### 🌏 Regional Digital Strategies
 
-- [ASEAN Digital Masterplan 2025](https://asean.org/asean-digital-masterplan-2025/) — regional framework covering digital infrastructure, services, and inclusion across Southeast Asia
+- [ASEAN Digital Masterplan 2025](https://asean.org/) — regional framework covering digital infrastructure, services, and inclusion across Southeast Asia
 - [Pacific Digital Economy Programme (PDEP)](https://www.thepalm.org/) — Pacific Islands digital economy and e-government programs covering 14 nations
 - [Smart Africa Blueprint](https://smartafrica.org/) — pan-African digital transformation framework adopted by 38 African heads of state
 - [Digital Economy for Africa (DE4A)](https://www.worldbank.org/en/programs/all-africa-digital-transformation) — World Bank initiative to connect every African individual, business, and government digitally by 2030
@@ -193,7 +194,7 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [ITU ICT Development Index](https://www.itu.int/en/ITU-D/Statistics/Pages/publications/mis/methodology.aspx) — benchmarks digital readiness across 167 countries
 - [OECD Digital Government Index](https://www.oecd.org/governance/digital-government/digital-government-index.htm) — maturity model covering six dimensions of digital government
-- [DIAL Digital Investment Framework](https://digitalimpactalliance.org/research/digital-investment-framework/) — helps prioritize DPG investments
+- [DIAL Digital Investment Framework](https://dial.global/) — helps prioritize DPG investments
 - [WEF Global Technology Governance Report](https://www.weforum.org/reports/global-technology-governance-report-2021/) — framework for responsible DPI deployment
 - [GovStack Digital Readiness Assessment](https://www.govstack.global/) — country readiness tool for building-block-based DPI
 
@@ -207,7 +208,7 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [UNICEF Venture Fund Guidance](https://www.unicef.org/innovation/venturefund) — how to fund and scale DPGs in low-income countries
 - [Digital Square Global Goods Maturity Model](https://digitalsquare.org/global-goods-maturity-model) — maturity model for health digital tools
-- [Open Source Policy Guide](https://github.com/OpenSourcePolicyCenter/toolkit) — policy frameworks for government open-source adoption
+- [Open Source Policy Guide](https://github.com/todogroup/ospology) — policy frameworks and OSPO guidance for government open-source adoption
 - [ITU Model Policy on Open Source](https://www.itu.int/) — ITU guidance for national open-source policies
 
 ---
@@ -232,7 +233,7 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 | [Digital Impact Alliance (DIAL)](https://digitalimpactalliance.org/) | Research on digital development |
 | [Digital Square](https://digitalsquare.org/) | Grants for global digital health tools |
 | [Co-Develop Fund](https://www.co-develop.net/) | Philanthropic funding for DPI in low-income countries |
-| [Gates Foundation](https://www.gatesfoundation.org/our-work/programs/global-growth-and-opportunity/financial-services-for-the-poor) | Financial inclusion |
+| [Gates Foundation](https://www.gatesfoundation.org/our-work/programs/global-growth-and-opportunity/inclusive-financial-systems) | Financial inclusion |
 | [Omidyar Network](https://omidyar.com/) | Investment in DPI and open internet |
 | [Rockefeller Foundation](https://www.rockefellerfoundation.org/) | Digital equity |
 
@@ -249,16 +250,17 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### 📖 Start Here
 
-- [The Case for a New Digital Bretton Woods](https://www.bu.edu/gdp/files/2022/05/GDP_PB_032_FIN.pdf) — Boston University Global Development Policy Center
+- [Digital Public Infrastructure and Development: A World Bank Group Approach](https://documents1.worldbank.org/curated/en/099031025172027713/pdf/P505739-84c5073b-9d40-4b83-a211-98b2263e87dd.pdf) — World Bank Digital Transformation White Paper, Vol. 1 (2025)
+- [The Case for a New Digital Bretton Woods](https://www.bu.edu/gdp/) — Boston University Global Development Policy Center
 - [DPI: A Moonshot for Equitable Growth](https://www.co-develop.net/dpi-moonshot) — Co-Develop Fund, 2022
 - [Rethinking Digital Public Infrastructure](https://www3.weforum.org/docs/WEF_Rethinking_Digital_Public_Infrastructure.pdf) — World Economic Forum
-- [Digital Public Infrastructure and Democracy](https://www.omidyar.com/insights/) — Omidyar Network
+- [Digital Public Infrastructure and Democracy](https://omidyarnetwork.com/) — Omidyar Network
 
 ### 📈 Impact Evidence
 
 - [DHIS2: 30 Years of Health Information Infrastructure](https://dhis2.org/impact/) — country-level impact across 100+ countries
 - [MOSIP Country Implementations](https://mosip.io/country.php) — national ID deployments across Africa and Asia
-- [Mojaloop Impact Report](https://mojaloop.io/impact/) — financial inclusion through open payments
+- [Mojaloop Impact Report](https://mojaloop.io/) — financial inclusion through open payments
 - [India Stack Impact](https://indiastack.org/) — 1.3B identities, $2T+ in UPI transactions annually
 
 ### 📜 Policy
@@ -278,8 +280,8 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 | [DPI Academy](https://www.undp.org/digital/academy) | UNDP | Beginner to Intermediate |
 | [ITU Academy](https://academy.itu.int/) | ITU | All levels |
 | [DHIS2 Academy](https://dhis2.org/academy/) | DHIS2 | Beginner to Advanced |
-| [GovStack Learning Path](https://www.govstack.global/learning/) | GovStack | Technical |
-| [Digital Principles e-Learning](https://digitalprinciples.org/learn/) | DIAL | Beginner |
+| [GovStack Learning Path](https://govstack.global/) | GovStack | Technical |
+| [Digital Principles e-Learning](https://digitalprinciples.org/principles/) | DIAL | Beginner |
 | [ODK Documentation](https://docs.getodk.org/) | ODK | Technical |
 
 ### 🏅 Certifications
@@ -308,7 +310,7 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 |-------------|--------------|
 | [UNICEF Venture Fund](https://www.unicef.org/innovation/venturefund) | DPG startups in low-income countries, no equity taken |
 | [Digital Square Open Calls](https://digitalsquare.org/opencalls) | Grants for global digital health tools |
-| [DIAL Fellowship](https://digitalimpactalliance.org/get-involved/) | Digital development practitioners |
+| [DIAL Fellowship](https://dial.global/) | Digital development practitioners |
 | [Co-Develop Country Grants](https://www.co-develop.net/) | Governments implementing DPI |
 
 ---
@@ -324,6 +326,33 @@ Things I learned working in the field that don't appear in any framework documen
 - **🔑 Agree on identifiers before you start.** Cycle IDs like `MSSI_2026_q1` need to match across the form, the pipeline, and the reporting logic from day one. Fixing this later is painful and expensive.
 - **📄 Always design for PDF.** Even with a live dashboard, senior government officials will ask for a PDF by email. Both channels need to work.
 - **🌊 The Pacific is not one context.** Fourteen island nations spread across millions of km² means offline-capable tools, cross-jurisdiction data agreements, and very limited local technical capacity. Generic solutions rarely fit.
+
+### 🧑‍🤝‍🧑 Design & Architecture
+
+- **👤 People first, always.** Human-Centered Design (HCD) is not optional. Run user research before writing a single requirement. The focal point filling in a form at 3G speed in a municipal office is your real user — not the minister who sees the dashboard.
+- **🗺️ Service blueprints before system design.** Map the as-is service end-to-end before touching any technology: who does what, when, with what information, and where it breaks. One day with frontline staff reveals more than a month of requirements documents.
+- **🛤️ User journeys are your north star.** Walk the full journey for each persona — focal point, programme officer, ministry director. Build the to-be journey first. Every technical decision should trace back to it.
+- **🏗️ TOGAF keeps the architecture conversation honest.** Even a lightweight pass through the ADM layers — Business → Data → Application → Technology — stops teams jumping straight to tools. It forces alignment on *what problem* you are solving before anyone debates *which platform* to use.
+
+### 📵 Offline-First & Last Mile
+
+- **Design offline-first, not offline-compatible.** There is a difference. Offline-compatible means someone added a sync button after launch. Offline-first means every interaction was designed assuming no connectivity — data queues locally, conflicts are resolved deterministically, and the user never sees a spinner. In fragile and rural contexts, this is the baseline, not an edge case.
+- **The last-mile problem is not a technical problem.** In most countries it is already known, costed, and budgeted — and still unresolved after a decade because the economics do not work for private operators and the political will for public investment is absent. Do not design DPI that depends on last-mile connectivity being solved first. Degrade gracefully: offline collection, async sync, SMS fallback, paper backup. The system that works on 2G today delivers more value than the one waiting for fibre in 2030.
+- **Test on the actual device.** A form that loads in 2 seconds on Chrome degrades to 45 seconds on a shared Android 8 phone in a municipal office. Test on the hardware your users actually have, in the connectivity conditions they actually face. This single practice eliminates more UX problems than any amount of user research done remotely.
+
+### ⚖️ Digital Divide, AI Divide & Inclusion
+
+- **The digital divide is not disappearing — it is replicating.** As foundational DPI (identity, payments, data exchange) becomes standard, a second layer of exclusion is forming around those who cannot use it: people without smartphones, without literacy, without the time or trust to engage with digital systems. DPI design that ignores this layer does not solve the divide — it moves the cutoff point.
+- **The AI divide is the digital divide at speed.** Countries and communities that lack clean, structured, governed data will not be able to use AI-enhanced public services — not because they lack AI, but because AI requires data infrastructure that takes years to build. If DPI is not deployed with data quality and governance as first-class concerns, the AI divide widens with every model release.
+- **Gender is a design variable, not a disclaimer.** Women in many low-income contexts have lower mobile ownership rates, lower literacy rates, and face social constraints on independent digital access. A DPI system that is nominally accessible but practically unusable for half the population is not a success. Collect disaggregated data by gender from day one. Run user research with women separately. Design for the constrained case.
+- **Disability and language are not edge cases.** In Pacific and Southeast Asian contexts, populations speak dozens of languages, including languages with no digital keyboard support. Screen readers are rare. Form logic that requires reading long instructions excludes a significant share of users. Build with the hardest-to-reach user in mind — everyone else is easier.
+
+### 🌐 Emerging Technologies
+
+- **Drones are DPI infrastructure in disguise.** In remote or island geographies, drone delivery of samples, medicines, and data collection hardware is already operational (Rwanda, Vanuatu). The DPI layer — routing, identity, logistics data — is what makes it scale. Design for drone integration the same way you design for mobile: as a channel, not a novelty.
+- **AgriTech requires ground truth, literally.** Satellite imagery, remote sensing, and AI crop monitoring are powerful — but they fail without local ground-truth data from farmers. The DPI layer that connects field agents, mobile forms, and satellite APIs is where the value is created. Tools like ODK, KoboToolbox, and DHIS2 are already being used for agricultural data pipelines.
+- **AI works when the data does.** Generative AI and predictive models for public services only work if the underlying data infrastructure is clean, consistent, and governed. Before deploying AI on top of DPI, ask: Is the data collected consistently? Are identifiers stable? Is there a data steward? Most AI failures in development contexts are data failures, not model failures.
+- **Emerging tech follows the same rule as everything else.** The question is never "is this technology exciting?" The question is "does this solve a real problem my users have, and can it be maintained by the people who will inherit it?" A drone corridor in Rwanda works because there is operational capacity behind it. A blockchain pilot in a fragile state usually does not.
 
 ### ⚠️ Common Mistakes
 
@@ -344,7 +373,7 @@ This list is kept up to date with contributions from people working in governmen
 
 **How to add a resource:**
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
-2. [Open an issue](../../issues/new/choose) using the Add Resource template
+2. [Open an issue](https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose) using the Add Resource template
 3. Or submit a pull request directly
 
 **What belongs here:**

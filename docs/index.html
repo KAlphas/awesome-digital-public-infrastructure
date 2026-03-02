@@ -9,236 +9,653 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
+    /* ── AINO TYPEFACE (Brand Estonia) ─────────────── */
+    @font-face {
+      font-family: 'Aino';
+      src: url('../fonts/Web/AinoWeb-Regular.woff2') format('woff2'),
+           url('../fonts/Web/AinoWeb-Regular.woff')  format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aino';
+      src: url('../fonts/Web/AinoWeb-Italic.woff2') format('woff2'),
+           url('../fonts/Web/AinoWeb-Italic.woff')  format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aino';
+      src: url('../fonts/Web/AinoWeb-Bold.woff2') format('woff2'),
+           url('../fonts/Web/AinoWeb-Bold.woff')  format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aino';
+      src: url('../fonts/Web/AinoWeb-BoldItalic.woff2') format('woff2'),
+           url('../fonts/Web/AinoWeb-BoldItalic.woff')  format('woff');
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Aino Headline';
+      src: url('../fonts/Web/AinoWeb-Headline.woff2') format('woff2'),
+           url('../fonts/Web/AinoWeb-Headline.woff')  format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ── BRAND ESTONIA TOKENS ───────────────────────── */
     :root {
-      --blue:    #1a73e8;
-      --teal:    #00897b;
-      --dark:    #1a1a2e;
-      --light:   #f4f7fb;
-      --border:  #e0e6ef;
-      --text:    #2d3748;
-      --muted:   #718096;
+      /* Primary */
+      --blue:     #0000f0;   /* Estonian Blue */
+      --blue-dk:  #0000b4;   /* Kolga */
+      --blue-lm:  #0062f5;   /* Paldiski */
+      /* Neutral (Rändrahnud) */
+      --pahkla:   #f0f1f2;   /* Pahkla — lightest */
+      --hellamaa: #cfd1d2;   /* Hellamaa — border */
+      --muted:    #575a5d;   /* Majakivi */
+      --text:     #323334;   /* Mustkivi */
+      /* Accent */
+      --yellow:   #e1e000;   /* Tudu */
+      --ratva:    #d6e6fd;   /* Ratva — light blue */
+      --soomaa:   #d1ecde;   /* Soomaa — light green */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--light);
+      font-family: 'Aino', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
       color: var(--text);
       line-height: 1.6;
+      font-size: 16px;
     }
 
     /* ── HERO ─────────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: var(--blue);
       color: #fff;
-      padding: 80px 24px 64px;
-      text-align: center;
+      padding: 72px 24px 56px;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--text);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
+      font-family: 'Aino Headline', 'Aino', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      max-width: 720px;
     }
-    .hero h1 span { color: #64b5f6; }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--yellow);
+    }
     .hero p {
-      font-size: 1.1rem;
-      max-width: 680px;
-      margin: 0 auto 32px;
-      opacity: 0.85;
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin-bottom: 36px;
+      opacity: 0.88;
+      line-height: 1.65;
     }
-    .hero-badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .hero-badges a img { height: 24px; }
+    .hero-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-badges a img { height: 22px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
+      padding: 12px 22px;
+      font-family: 'Aino', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
       text-decoration: none;
-      transition: opacity .2s;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
     }
-    .btn:hover { opacity: .85; }
-    .btn-primary { background: #64b5f6; color: #0f2027; }
-    .btn-outline { border: 2px solid rgba(255,255,255,.5); color: #fff; }
-    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+    .btn-primary {
+      background: #fff;
+      color: var(--blue);
+      border-color: #fff;
+    }
+    .btn-primary:hover { background: var(--yellow); border-color: var(--yellow); color: var(--text); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.6);
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
 
     /* ── STATS BAR ─────────────────────────────────── */
     .stats {
       background: #fff;
-      border-bottom: 1px solid var(--border);
-      padding: 20px 24px;
+      border-bottom: 1px solid var(--hellamaa);
+      padding: 0 24px;
     }
     .stats-inner {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
-      gap: 40px;
-      justify-content: center;
+      gap: 0;
       flex-wrap: wrap;
     }
-    .stat { text-align: center; }
-    .stat strong { display: block; font-size: 1.8rem; font-weight: 700; color: var(--blue); }
-    .stat span { font-size: 0.85rem; color: var(--muted); }
+    .stat {
+      padding: 28px 40px 28px 0;
+      text-align: left;
+      border-right: 1px solid var(--hellamaa);
+      margin-right: 40px;
+    }
+    .stat:last-child { border-right: none; margin-right: 0; }
+    .stat strong {
+      display: block;
+      font-family: 'Aino Headline', 'Aino', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .stat span { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.03em; margin-top: 4px; display: block; }
+
+    /* ── FEATURED RESOURCE ─────────────────────────── */
+    .featured-wrap {
+      background: var(--ratva);
+      border-bottom: 3px solid var(--blue);
+    }
+    .featured {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+    .featured-badge {
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      white-space: nowrap;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .featured a {
+      color: var(--blue);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    .featured a:hover { color: var(--blue-dk); }
 
     /* ── MAIN ──────────────────────────────────────── */
     main {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 56px 24px;
     }
 
+    .section { margin-bottom: 60px; }
+
     h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 20px;
+      font-family: 'Aino Headline', 'Aino', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       display: flex;
       align-items: center;
       gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--blue);
     }
-    h2 i { color: var(--blue); font-size: 1.2rem; }
+    h2 i { color: var(--blue); font-size: 1rem; }
 
     /* ── SECTION CARDS ─────────────────────────────── */
-    .section { margin-bottom: 56px; }
-
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 16px;
     }
-
     .card {
       background: #fff;
-      border: 1px solid var(--border);
+      border: 1px solid var(--hellamaa);
       border-radius: 12px;
-      padding: 20px;
+      padding: 22px;
       text-decoration: none;
       color: inherit;
-      transition: box-shadow .2s, transform .2s;
+      transition: box-shadow 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
-    .card:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,.08);
-      transform: translateY(-2px);
-    }
+    .card:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-3px); }
     .card-icon {
       width: 40px;
       height: 40px;
+      background: var(--ratva);
       border-radius: 10px;
-      background: var(--light);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--blue);
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
     }
-    .card h3 { font-size: 0.95rem; font-weight: 600; }
-    .card p  { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .card h3 { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .card p  { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
     .card .tag {
       display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #e8f0fe;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      background: var(--ratva);
       color: var(--blue);
+      border-radius: 20px;
       align-self: flex-start;
+      margin-top: 4px;
     }
 
-    /* ── COUNTRY TABLE ─────────────────────────────── */
+    /* ── COUNTRY GRID ──────────────────────────────── */
     .country-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 16px;
     }
     .country-card {
       background: #fff;
-      border: 1px solid var(--border);
+      border: 1px solid var(--hellamaa);
       border-radius: 12px;
-      padding: 20px;
+      padding: 24px;
       text-decoration: none;
       color: inherit;
-      transition: box-shadow .2s;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: block;
     }
-    .country-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
-    .country-card .flag { font-size: 2rem; margin-bottom: 8px; display: block; }
-    .country-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-    .country-card p { font-size: 0.82rem; color: var(--muted); }
-    .country-card .chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+    .country-card:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-3px); }
+    .country-card .flag { font-size: 2rem; margin-bottom: 10px; display: block; }
+    .country-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .country-card p { font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; }
+    .country-card .chips { display: flex; flex-wrap: wrap; gap: 4px; }
     .chip {
-      font-size: 0.72rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #e0f2f1;
-      color: var(--teal);
-      font-weight: 500;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      background: var(--ratva);
+      color: var(--blue-dk);
+      border-radius: 3px;
     }
 
     /* ── DOMAIN GRID ───────────────────────────────── */
     .domain-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
     }
     .domain-pill {
       background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
+      border: 1px solid var(--hellamaa);
+      border-radius: 10px;
+      padding: 18px 12px;
       text-align: center;
       text-decoration: none;
       color: var(--text);
-      transition: background .2s;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+      display: block;
     }
-    .domain-pill:hover { background: var(--blue); color: #fff; }
+    .domain-pill:hover { background: var(--blue); color: #fff; box-shadow: 0 4px 16px rgba(0,0,240,0.2); }
     .domain-pill:hover i { color: #fff; }
-    .domain-pill i { display: block; font-size: 1.4rem; color: var(--blue); margin-bottom: 8px; }
-    .domain-pill span { font-size: 0.8rem; font-weight: 500; }
+    .domain-pill i {
+      display: block;
+      font-size: 1.3rem;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .domain-pill span { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* ── FIELD NOTES ───────────────────────────────── */
+    .field-notes-box {
+      border: 1px solid var(--hellamaa);
+      border-top: 4px solid var(--blue);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .field-notes-box .fn-header {
+      background: var(--pahkla);
+      padding: 16px 24px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--hellamaa);
+    }
+    .field-notes-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .field-notes-box li {
+      display: flex;
+      gap: 14px;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--hellamaa);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      align-items: flex-start;
+    }
+    .field-notes-box li:last-child { border-bottom: none; }
+    .fn-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .field-notes-box li strong { color: var(--text); }
+    .fn-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 16px 24px;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--hellamaa);
+    }
+    .fn-more:hover { background: var(--blue); color: #fff; }
+
+    /* ── LINK GRID (frameworks) ────────────────────── */
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .link-item {
+      background: #fff;
+      border: 1px solid var(--hellamaa);
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .link-item:hover { box-shadow: 0 8px 28px rgba(0,0,240,0.09); transform: translateY(-2px); }
+    .link-item:hover .link-title { color: var(--blue); }
+    .link-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+    .link-org {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+    .link-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 1px 6px;
+      background: var(--blue);
+      color: #fff;
+    }
+    .link-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      transition: color 0.15s;
+    }
+    .link-desc {
+      font-size: 0.79rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── PAPER LIST ─────────────────────────────────── */
+    .paper-list {
+      border: 1px solid var(--hellamaa);
+      border-top: 3px solid var(--blue);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .paper-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--hellamaa);
+      transition: background 0.15s;
+    }
+    .paper-item:last-child { border-bottom: none; }
+    .paper-item:hover { background: var(--pahkla); }
+    .paper-item:hover .paper-title { color: var(--blue); }
+    .paper-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+      width: 68px;
+      text-align: center;
+      padding-top: 2px;
+    }
+    .paper-org {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      background: var(--blue);
+      padding: 2px 6px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .paper-year {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .paper-right { flex: 1; min-width: 0; }
+    .paper-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      transition: color 0.15s;
+    }
+    .paper-desc {
+      font-size: 0.79rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .paper-icon {
+      font-size: 0.8rem;
+      color: var(--hellamaa);
+      flex-shrink: 0;
+      margin-top: 4px;
+      transition: color 0.15s;
+    }
+    .paper-item:hover .paper-icon { color: var(--blue); }
+
+    /* ── SEE MORE LINK ──────────────────────────────── */
+    .see-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 8px 0;
+    }
+    .see-more:hover { color: var(--blue-dk); }
+    .see-more i { font-size: 0.7rem; }
+
+    /* ── CONTRIBUTE STRIP ──────────────────────────── */
+    .contribute-strip {
+      background: var(--blue);
+      padding: 56px 24px;
+    }
+    .contribute-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .contribute-strip h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    .contribute-strip h2 i { color: rgba(255,255,255,0.7); }
+    .contribute-strip p { font-size: 0.92rem; color: rgba(255,255,255,0.75); max-width: 420px; }
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--text);
+      border-color: var(--yellow);
+      font-weight: 700;
+      border-radius: 6px;
+    }
+    .btn-yellow:hover { background: #fff; border-color: #fff; color: var(--blue); }
 
     /* ── FOOTER ────────────────────────────────────── */
     footer {
-      background: var(--dark);
-      color: rgba(255,255,255,.7);
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.85rem;
+      background: #0a0a1e;
+      color: rgba(255,255,255,0.55);
+      padding: 36px 24px;
+      font-size: 0.82rem;
     }
-    footer a { color: #64b5f6; text-decoration: none; }
-    footer .heart { color: #e53e3e; }
-    footer .croc  { font-size: 1.1rem; }
+    footer .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer a { color: var(--yellow); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── ACCESSIBILITY / FOCUS ─────────────────────── */
+    :focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 2px;
+    }
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--yellow);
+      color: var(--text);
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .stats-inner { gap: 0; }
+      .stat { padding: 16px 20px 16px 0; margin-right: 20px; }
+      .contribute-strip-inner { flex-direction: column; align-items: flex-start; }
+      footer .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <!-- ── HERO ─────────────────────────────────────────── -->
 <header class="hero">
-  <h1><i class="fa-solid fa-network-wired"></i> Awesome <span>Digital Public Infrastructure</span></h1>
-  <p>A curated list of DPI and DPG resources — open-source solutions, frameworks, country stacks, and field-tested insights for governments, UN agencies, NGOs, and developers.</p>
-  <div class="hero-badges">
-    <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-    <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">
-      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="Contributions Welcome" />
-    </a>
-  </div>
-  <div class="hero-cta">
-    <a class="btn btn-primary" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">
-      <i class="fa-brands fa-github"></i> View on GitHub
-    </a>
-    <a class="btn btn-outline" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
-      <i class="fa-solid fa-plus"></i> Add Resource
-    </a>
+  <div class="hero-inner">
+    <span class="hero-label">Open Resource List</span>
+    <h1>Awesome <em>Digital Public Infrastructure</em></h1>
+    <p>A curated list of DPI and DPG resources — open-source solutions, frameworks, country stacks, and field-tested insights for governments, UN agencies, NGOs, and developers.</p>
+    <div class="hero-badges">
+      <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+      <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">
+        <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="Contributions Welcome" />
+      </a>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">
+        <i class="fa-brands fa-github"></i> View on GitHub
+      </a>
+      <a class="btn btn-outline" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
+        <i class="fa-solid fa-plus"></i> Add Resource
+      </a>
+    </div>
   </div>
 </header>
 
@@ -252,8 +669,20 @@
   </div>
 </div>
 
+<!-- ── FEATURED RESOURCE ─────────────────────────────── -->
+<div class="featured-wrap">
+  <div class="featured">
+    <span class="featured-badge">New</span>
+    <div>
+      <a href="https://documents1.worldbank.org/curated/en/099031025172027713/pdf/P505739-84c5073b-9d40-4b83-a211-98b2263e87dd.pdf"
+         target="_blank" rel="noopener">Digital Public Infrastructure and Development: A World Bank Group Approach</a>
+      — Digital Transformation White Paper Vol. 1, World Bank (2025)
+    </div>
+  </div>
+</div>
+
 <!-- ── MAIN ──────────────────────────────────────────── -->
-<main>
+<main id="main-content">
 
   <!-- DOMAINS -->
   <section class="section">
@@ -321,16 +750,168 @@
     </div>
   </section>
 
-  <!-- QUICK LINKS -->
+  <!-- FRAMEWORKS -->
   <section class="section">
-    <h2><i class="fa-solid fa-compass"></i> Quick Links</h2>
-    <div class="card-grid">
-      <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-frameworks--standards">
-        <div class="card-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-        <h3>Frameworks & Standards</h3>
-        <p>UNDP DPG Standard, GovStack, ITU, OECD, World Bank, Co-Develop.</p>
-        <span class="tag">7 resources</span>
+    <h2><i class="fa-solid fa-ruler-combined"></i> Key DPI Frameworks</h2>
+    <div class="link-grid">
+      <a class="link-item" href="https://digitalpublicgoods.net/standard/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">DPGA</span>
+          <span class="link-tag">Certification</span>
+        </div>
+        <div class="link-title">DPG Standard</div>
+        <div class="link-desc">Nine criteria a solution must meet to be certified as a Digital Public Good.</div>
       </a>
+      <a class="link-item" href="https://specs.govstack.global/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">GovStack</span>
+          <span class="link-tag">Architecture</span>
+        </div>
+        <div class="link-title">GovStack Reference Architecture</div>
+        <div class="link-desc">Building-block model for assembling interoperable government digital services.</div>
+      </a>
+      <a class="link-item" href="https://digitalprinciples.org/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">DIAL / 300+ orgs</span>
+          <span class="link-tag">Principles</span>
+        </div>
+        <div class="link-title">Principles for Digital Development</div>
+        <div class="link-desc">Nine principles adopted by 300+ organizations for technology in development.</div>
+      </a>
+      <a class="link-item" href="https://www.co-develop.net/dpi-safeguards" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">Co-Develop</span>
+          <span class="link-tag">Safeguards</span>
+        </div>
+        <div class="link-title">DPI Safeguards Framework</div>
+        <div class="link-desc">Rights-based guidance for designing DPI that protects people, not just systems.</div>
+      </a>
+      <a class="link-item" href="https://www.oecd.org/governance/digital-government/oecd-digital-government-policy-framework.htm" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">OECD</span>
+          <span class="link-tag">Policy</span>
+        </div>
+        <div class="link-title">Digital Government Policy Framework</div>
+        <div class="link-desc">Six dimensions for assessing digital government maturity across member countries.</div>
+      </a>
+      <a class="link-item" href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">EU</span>
+          <span class="link-tag">Regulation</span>
+        </div>
+        <div class="link-title">EU AI Act</div>
+        <div class="link-desc">World's first comprehensive AI regulation — risk-based, binding for EU, reference globally.</div>
+      </a>
+      <a class="link-item" href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">UNESCO</span>
+          <span class="link-tag">Ethics</span>
+        </div>
+        <div class="link-title">Recommendation on AI Ethics</div>
+        <div class="link-desc">Only global normative framework on AI ethics, adopted by all 193 UNESCO member states.</div>
+      </a>
+      <a class="link-item" href="https://x-road.global/" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">NIIS</span>
+          <span class="link-tag">Interoperability</span>
+        </div>
+        <div class="link-title">X-Road</div>
+        <div class="link-desc">Open-source data exchange backbone powering Estonia and 40+ countries. MIT licensed.</div>
+      </a>
+      <a class="link-item" href="https://www.idea.int/theme/digital-public-infrastructure" target="_blank" rel="noopener">
+        <div class="link-meta">
+          <span class="link-org">IDEA International</span>
+          <span class="link-tag">Democracy</span>
+        </div>
+        <div class="link-title">DPI & Democracy</div>
+        <div class="link-desc">How Digital Public Infrastructure shapes electoral integrity, civic participation, and democratic governance worldwide.</div>
+      </a>
+    </div>
+    <a class="see-more" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-frameworks--standards">
+      All frameworks on GitHub <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </section>
+
+  <!-- PAPERS -->
+  <section class="section">
+    <h2><i class="fa-solid fa-book-open"></i> Key Papers & Reports</h2>
+    <div class="paper-list">
+      <a class="paper-item" href="https://documents1.worldbank.org/curated/en/099031025172027713/pdf/P505739-84c5073b-9d40-4b83-a211-98b2263e87dd.pdf" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">World Bank</span>
+          <span class="paper-year">2025</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">Digital Public Infrastructure and Development: A World Bank Group Approach</div>
+          <div class="paper-desc">The definitive WBG position paper on DPI strategy, investment, and implementation. Vol. 1 of the Digital Transformation White Paper series.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www.co-develop.net/dpi-moonshot" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">Co-Develop</span>
+          <span class="paper-year">2022</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">DPI: A Moonshot for Equitable Growth</div>
+          <div class="paper-desc">The founding case for DPI as the key lever for inclusive economic development in low-income countries.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www3.weforum.org/docs/WEF_Rethinking_Digital_Public_Infrastructure.pdf" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">WEF</span>
+          <span class="paper-year">2023</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">Rethinking Digital Public Infrastructure</div>
+          <div class="paper-desc">WEF analysis of DPI governance models, private-public collaboration, and risks of capture.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://www.bu.edu/gdp/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">BU GDP</span>
+          <span class="paper-year">2023</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">The Case for a New Digital Bretton Woods</div>
+          <div class="paper-desc">Boston University Global Development Policy Center on multilateral coordination for fair DPI governance.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://dhis2.org/impact/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">DHIS2</span>
+          <span class="paper-year">2024</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">30 Years of Health Information Infrastructure</div>
+          <div class="paper-desc">Impact evidence from 100+ country deployments — the canonical case study for open-source DPI at scale.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+      <a class="paper-item" href="https://indiastack.org/" target="_blank" rel="noopener">
+        <div class="paper-left">
+          <span class="paper-org">iSPIRT</span>
+          <span class="paper-year">2024</span>
+        </div>
+        <div class="paper-right">
+          <div class="paper-title">India Stack Impact Report</div>
+          <div class="paper-desc">1.3B digital identities, $2T+ in UPI transactions — the most documented DPI outcome in history.</div>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square paper-icon"></i>
+      </a>
+    </div>
+    <a class="see-more" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-research--reports">
+      All papers on GitHub <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </section>
+
+  <!-- MORE RESOURCES -->
+  <section class="section">
+    <h2><i class="fa-solid fa-compass"></i> More Resources</h2>
+    <div class="card-grid">
       <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-toolkits--assessment-frameworks">
         <div class="card-icon"><i class="fa-solid fa-toolbox"></i></div>
         <h3>Toolkits & Assessment</h3>
@@ -342,12 +923,6 @@
         <h3>Organizations</h3>
         <p>DPGA, UNICEF, UNDP, DIAL, Digital Square, Co-Develop, and more.</p>
         <span class="tag">15+ orgs</span>
-      </a>
-      <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-research--reports">
-        <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
-        <h3>Research & Reports</h3>
-        <p>Foundational papers, impact studies, policy briefs from leading institutions.</p>
-        <span class="tag">10+ papers</span>
       </a>
       <a class="card" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#-courses--learning">
         <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
@@ -367,49 +942,106 @@
   <!-- FIELD NOTES TEASER -->
   <section class="section">
     <h2><i class="fa-solid fa-campground"></i> Field Notes</h2>
-    <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;">
-      <p style="font-size:0.95rem;margin-bottom:16px;">
+    <div class="field-notes-box">
+      <div class="fn-header">
         Hard-won lessons from real DPI implementations — not found in any framework document.
         Contributed by practitioners with field experience in UNICEF, UNDP, and national government deployments.
-      </p>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-        <li><i class="fa-solid fa-wifi" style="color:var(--blue);width:20px;"></i> <strong>Infrastructure before applications</strong> — lightweight tools outperform complex HMIS in fragile states.</li>
-        <li><i class="fa-solid fa-handshake" style="color:var(--blue);width:20px;"></i> <strong>Ministry buy-in is the bottleneck</strong> — stakeholder alignment takes months, not weeks.</li>
-        <li><i class="fa-solid fa-key" style="color:var(--blue);width:20px;"></i> <strong>Consistent identifiers from day one</strong> — cycle ID mismatches break cross-system reporting.</li>
-        <li><i class="fa-solid fa-file-pdf" style="color:var(--blue);width:20px;"></i> <strong>Design for PDF too</strong> — email + PDF remains the de facto channel for senior officials.</li>
+      </div>
+      <ul>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-wifi"></i></div>
+          <div><strong>Infrastructure before applications</strong> — lightweight tools outperform complex HMIS in fragile states.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div><strong>Ministry buy-in is the bottleneck</strong> — stakeholder alignment takes months, not weeks.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-key"></i></div>
+          <div><strong>Consistent identifiers from day one</strong> — cycle ID mismatches break cross-system reporting.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-file-pdf"></i></div>
+          <div><strong>Design for PDF too</strong> — email + PDF remains the de facto channel for senior officials.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+          <div><strong>People first, always</strong> — Human-Centered Design (HCD) is not optional. Run user research before writing a single requirement. The focal point filling in a form at 3G speed in a municipal office is your primary user, not the minister who will see the dashboard.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-map"></i></div>
+          <div><strong>Service blueprints before system design</strong> — map the as-is service end-to-end before touching any technology. A one-day workshop with frontline staff reveals more than a month of requirements documents.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-route"></i></div>
+          <div><strong>User journeys expose the real pain</strong> — walk the user journey for each persona. The to-be journey is your north star. Every technical decision should map back to it.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-sitemap"></i></div>
+          <div><strong>TOGAF helps frame the architecture conversation</strong> — even a lightweight ADM (business → data → application → technology) stops teams from jumping straight to tools.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-signal"></i></div>
+          <div><strong>Design offline-first, not offline-compatible</strong> — offline-first means every interaction was designed assuming no connectivity. The last-mile problem is political, not technical. Degrade gracefully: offline collection, async sync, SMS fallback, paper backup.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-helicopter"></i></div>
+          <div><strong>Drones, AgriTech, and AI follow the same rule</strong> — the question is never "is this technology exciting?" It is "does this solve a real problem and can it be maintained by the people who inherit it?" Most AI failures in development contexts are data failures, not model failures.</div>
+        </li>
+        <li>
+          <div class="fn-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div><strong>The digital divide is replicating, not closing</strong> — the AI divide compounds this: countries without clean, governed data cannot use AI-enhanced public services. Gender is a design variable, not a disclaimer. Build for the hardest-to-reach user first.</div>
+        </li>
       </ul>
-      <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#%EF%B8%8F-field-notes--real-implementation-insights"
-         style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--blue);font-weight:600;text-decoration:none;font-size:0.9rem;">
+      <a class="fn-more"
+         href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure#%EF%B8%8F-field-notes--real-implementation-insights">
         Read all field notes <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
   </section>
 
-  <!-- CONTRIBUTE -->
-  <section class="section" style="text-align:center;">
-    <h2 style="justify-content:center;"><i class="fa-solid fa-code-pull-request"></i> Contribute</h2>
-    <p style="max-width:560px;margin:0 auto 24px;color:var(--muted);">
-      Know a DPG, framework, or implementation that should be here? Open an issue or submit a pull request.
-    </p>
-    <a class="btn btn-primary" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
+</main>
+
+<!-- ── CONTRIBUTE ─────────────────────────────────────── -->
+<div class="contribute-strip">
+  <div class="contribute-strip-inner">
+    <div>
+      <h2><i class="fa-solid fa-code-pull-request"></i> Contribute</h2>
+      <p>Know a DPG, framework, or implementation that should be here? Open an issue or submit a pull request.</p>
+    </div>
+    <a class="btn btn-yellow" href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/issues/new/choose">
       <i class="fa-solid fa-plus"></i> Add a Resource
     </a>
-  </section>
-
-</main>
+  </div>
+</div>
 
 <!-- ── FOOTER ─────────────────────────────────────────── -->
 <footer>
-  <p>
-    Made with <span class="heart">❤️</span> in the <span class="croc">🐊</span> island &nbsp;·&nbsp;
-    <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">GitHub</a> &nbsp;·&nbsp;
-    <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">Contribute</a> &nbsp;·&nbsp;
-    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 License</a>
-  </p>
-  <p style="margin-top:8px;font-size:0.78rem;opacity:.6;">
-    <i class="fa-brands fa-font-awesome"></i> Icons by Font Awesome &nbsp;·&nbsp;
-    <i class="fa-solid fa-check-double"></i> DPGs certified by <a href="https://digitalpublicgoods.net">DPGA</a>
-  </p>
+  <div class="footer-inner">
+    <div>
+      <div style="margin-bottom:8px;">
+        Made with ❤️ in the 🐊 island &nbsp;·&nbsp;
+        <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure">GitHub</a> &nbsp;·&nbsp;
+        <a href="https://github.com/paulo-amaral/awesome-digital-public-infrastructure/blob/main/CONTRIBUTING.md">Contribute</a> &nbsp;·&nbsp;
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 License</a>
+      </div>
+      <div style="font-size:0.76rem;opacity:0.55;">
+        <i class="fa-brands fa-font-awesome"></i> Icons: Font Awesome &nbsp;·&nbsp;
+        DPGs certified by <a href="https://digitalpublicgoods.net">DPGA</a>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div style="margin-bottom:6px;font-size:0.78rem;opacity:0.7;">Design system</div>
+      <a href="https://brand.estonia.ee" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;color:var(--yellow);font-weight:700;font-size:0.85rem;text-decoration:none;">
+        🇪🇪 Brand Estonia
+      </a>
+      <div style="font-size:0.72rem;opacity:0.5;margin-top:4px;">
+        Aino typeface · Estonian colour palette<br>
+        <a href="https://toolbox.estonia.ee" target="_blank" rel="noopener">toolbox.estonia.ee</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>
