@@ -323,53 +323,19 @@ Want to contribute a country profile? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 🏕️ Field Notes
 
-Things I learned working in the field that don't appear in any framework document.
+Things learned working in the field that don't appear in any framework document. Built from implementations with UNICEF, UNDP, and government teams across Timor-Leste, the Pacific, and fragile states.
 
-### 🌴 From Timor-Leste and the Pacific
+| Note | Topics |
+|------|--------|
+| [🌴 Timor-Leste and the Pacific](docs/field-notes/timor-leste-pacific.md) | Fragile states, ministry alignment, identifiers, offline tools |
+| [🧑‍🤝‍🧑 Design & Architecture](docs/field-notes/design-architecture.md) | HCD, service blueprints, user journeys, TOGAF |
+| [📵 Offline-First & Last Mile](docs/field-notes/offline-first.md) | Connectivity, sync, device testing, 2G |
+| [⚖️ Digital Divide, AI Divide & Inclusion](docs/field-notes/digital-divide-inclusion.md) | Gender, disability, language, AI divide |
+| [🌐 Emerging Technologies](docs/field-notes/emerging-technologies.md) | Drones, AgriTech, AI, data readiness |
+| [🏛️ Policies, Standards & Laws](docs/field-notes/policies-standards-laws.md) | Legal alignment, data protection, standards, governance |
+| [⚠️ Common Mistakes](docs/field-notes/common-mistakes.md) | Vendor lock-in, sustainability, interoperability |
 
-- **📶 Start with what works, not what's ideal.** In fragile states, KoboToolbox running on 3G beats a complex HMIS that needs a reliable server and trained IT staff. Build up from there.
-- **🤝 The technology is the easy part.** Getting four ministries to agree on a common data schema took longer than building the entire pipeline. Budget time for this — seriously.
-- **🔑 Agree on identifiers before you start.** Cycle IDs like `MSSI_2026_q1` need to match across the form, the pipeline, and the reporting logic from day one. Fixing this later is painful and expensive.
-- **📄 Always design for PDF.** Even with a live dashboard, senior government officials will ask for a PDF by email. Both channels need to work.
-- **🌊 The Pacific is not one context.** Fourteen island nations spread across millions of km² means offline-capable tools, cross-jurisdiction data agreements, and very limited local technical capacity. Generic solutions rarely fit.
-
-### 🧑‍🤝‍🧑 Design & Architecture
-
-- **👤 People first, always.** Human-Centered Design (HCD) is not optional. Run user research before writing a single requirement. The focal point filling in a form at 3G speed in a municipal office is your real user — not the minister who sees the dashboard.
-- **🗺️ Service blueprints before system design.** Map the as-is service end-to-end before touching any technology: who does what, when, with what information, and where it breaks. One day with frontline staff reveals more than a month of requirements documents.
-- **🛤️ User journeys are your north star.** Walk the full journey for each persona — focal point, programme officer, ministry director. Build the to-be journey first. Every technical decision should trace back to it.
-- **🏗️ TOGAF keeps the architecture conversation honest.** Even a lightweight pass through the ADM layers — Business → Data → Application → Technology — stops teams jumping straight to tools. It forces alignment on *what problem* you are solving before anyone debates *which platform* to use.
-
-### 📵 Offline-First & Last Mile
-
-- **Design offline-first, not offline-compatible.** There is a difference. Offline-compatible means someone added a sync button after launch. Offline-first means every interaction was designed assuming no connectivity — data queues locally, conflicts are resolved deterministically, and the user never sees a spinner. In fragile and rural contexts, this is the baseline, not an edge case.
-- **The last-mile problem is not a technical problem.** In most countries it is already known, costed, and budgeted — and still unresolved after a decade because the economics do not work for private operators and the political will for public investment is absent. Do not design DPI that depends on last-mile connectivity being solved first. Degrade gracefully: offline collection, async sync, SMS fallback, paper backup. The system that works on 2G today delivers more value than the one waiting for fibre in 2030.
-- **Test on the actual device.** A form that loads in 2 seconds on Chrome degrades to 45 seconds on a shared Android 8 phone in a municipal office. Test on the hardware your users actually have, in the connectivity conditions they actually face. This single practice eliminates more UX problems than any amount of user research done remotely.
-
-### ⚖️ Digital Divide, AI Divide & Inclusion
-
-- **The digital divide is not disappearing — it is replicating.** As foundational DPI (identity, payments, data exchange) becomes standard, a second layer of exclusion is forming around those who cannot use it: people without smartphones, without literacy, without the time or trust to engage with digital systems. DPI design that ignores this layer does not solve the divide — it moves the cutoff point.
-- **The AI divide is the digital divide at speed.** Countries and communities that lack clean, structured, governed data will not be able to use AI-enhanced public services — not because they lack AI, but because AI requires data infrastructure that takes years to build. If DPI is not deployed with data quality and governance as first-class concerns, the AI divide widens with every model release.
-- **Gender is a design variable, not a disclaimer.** Women in many low-income contexts have lower mobile ownership rates, lower literacy rates, and face social constraints on independent digital access. A DPI system that is nominally accessible but practically unusable for half the population is not a success. Collect disaggregated data by gender from day one. Run user research with women separately. Design for the constrained case.
-- **Disability and language are not edge cases.** In Pacific and Southeast Asian contexts, populations speak dozens of languages, including languages with no digital keyboard support. Screen readers are rare. Form logic that requires reading long instructions excludes a significant share of users. Build with the hardest-to-reach user in mind — everyone else is easier.
-
-### 🌐 Emerging Technologies
-
-- **Drones are DPI infrastructure in disguise.** In remote or island geographies, drone delivery of samples, medicines, and data collection hardware is already operational (Rwanda, Vanuatu). The DPI layer — routing, identity, logistics data — is what makes it scale. Design for drone integration the same way you design for mobile: as a channel, not a novelty.
-- **AgriTech requires ground truth, literally.** Satellite imagery, remote sensing, and AI crop monitoring are powerful — but they fail without local ground-truth data from farmers. The DPI layer that connects field agents, mobile forms, and satellite APIs is where the value is created. Tools like ODK, KoboToolbox, and DHIS2 are already being used for agricultural data pipelines.
-- **AI works when the data does.** Generative AI and predictive models for public services only work if the underlying data infrastructure is clean, consistent, and governed. Before deploying AI on top of DPI, ask: Is the data collected consistently? Are identifiers stable? Is there a data steward? Most AI failures in development contexts are data failures, not model failures.
-- **Emerging tech follows the same rule as everything else.** The question is never "is this technology exciting?" The question is "does this solve a real problem my users have, and can it be maintained by the people who will inherit it?" A drone corridor in Rwanda works because there is operational capacity behind it. A blockchain pilot in a fragile state usually does not.
-
-### ⚠️ Common Mistakes
-
-| What goes wrong | How it looks | How to avoid it |
-|--------|-------------------|--------------|
-| **Vendor lock-in as DPI** | "Open" solutions with closed APIs | Check for open APIs and exportable data before you sign anything |
-| **Digital-first, everyone else later** | 30-40% of users have no smartphone | Build for USSD, IVR, and in-person from the start |
-| **No sustainability plan** | System dies when the donor project ends | Budget for operations before features |
-| **Interoperability as an afterthought** | Two systems that can't talk to each other | Design the integration architecture first |
-| **Collecting data without governance** | Data piles up with no privacy framework | Governance before collection |
-| **Copying India Stack** | Assuming what worked at 1.4B scale fits a country of 1.3M | Adapt to local context — legal, political, and capacity |
+→ [Browse all field notes](docs/field-notes/README.md)
 
 ---
 
