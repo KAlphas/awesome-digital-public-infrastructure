@@ -29,6 +29,9 @@ https://www.afdb.org/*
 https://www.ihris.org/*
 https://www.cpimsglobal.org/*
 
+# WordPress 500 — accessible in browser, server-side intermittent error
+https://digitalpublicinfrastructure.ai/*
+
 # Timeouts in CI (intermittent or geo-blocked from GitHub Actions runners)
 https://www.terviseportaal.ee/*
 https://e-resident.gov.ee/*
