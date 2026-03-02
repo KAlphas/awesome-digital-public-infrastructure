@@ -332,6 +332,19 @@ Things I learned working in the field that don't appear in any framework documen
 - **🛤️ User journeys are your north star.** Walk the full journey for each persona — focal point, programme officer, ministry director. Build the to-be journey first. Every technical decision should trace back to it.
 - **🏗️ TOGAF keeps the architecture conversation honest.** Even a lightweight pass through the ADM layers — Business → Data → Application → Technology — stops teams jumping straight to tools. It forces alignment on *what problem* you are solving before anyone debates *which platform* to use.
 
+### 📵 Offline-First & Connectivity
+
+- **Design offline-first, not offline-compatible.** There is a difference. Offline-compatible means someone added a sync button after launch. Offline-first means every interaction was designed assuming no connectivity — data queues locally, conflicts are resolved deterministically, and the user never sees a spinner. In fragile and rural contexts, this is the baseline, not an edge case.
+- **Connectivity is political, not just technical.** In many countries, the last-mile internet problem is known, budgeted for, and still unresolved after a decade. Do not wait for infrastructure to catch up. Design your DPI components to degrade gracefully: offline collection, async sync, SMS fallback, paper backup. The system that works on 2G today beats the one planned for fibre in 2030.
+- **Test on the actual device, not your laptop.** A form that loads in 2 seconds on Chrome degrades to 45 seconds on a shared Android 8 phone in a municipality office. Test on the hardware your users actually have, in the connectivity conditions they actually face.
+
+### 🌐 Emerging Technologies
+
+- **Drones are DPI infrastructure in disguise.** In remote or island geographies, drone delivery of samples, medicines, and data collection hardware is already operational (Rwanda, Vanuatu). The DPI layer — routing, identity, logistics data — is what makes it scale. Design for drone integration the same way you design for mobile: as a channel, not a novelty.
+- **AgriTech requires ground truth, literally.** Satellite imagery, remote sensing, and AI crop monitoring are powerful — but they fail without local ground-truth data from farmers. The DPI layer that connects field agents, mobile forms, and satellite APIs is where the value is created. Tools like ODK, KoboToolbox, and DHIS2 are already being used for agricultural data pipelines.
+- **AI works when the data does.** Generative AI and predictive models for public services only work if the underlying data infrastructure is clean, consistent, and governed. Before deploying AI on top of DPI, ask: Is the data collected consistently? Are identifiers stable? Is there a data steward? Most AI failures in development contexts are data failures, not model failures.
+- **Emerging tech follows the same rule as everything else.** The question is never "is this technology exciting?" The question is "does this solve a real problem my users have, and can it be maintained by the people who will inherit it?" A drone corridor in Rwanda works because there is operational capacity behind it. A blockchain pilot in a fragile state usually does not.
+
 ### ⚠️ Common Mistakes
 
 | What goes wrong | How it looks | How to avoid it |
