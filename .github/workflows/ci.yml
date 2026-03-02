@@ -37,7 +37,6 @@ jobs:
             --timeout 30
             --max-retries 3
             --retry-wait-time 2
-            --exclude-mail
             --exclude-loopback
             --accept 200,206,429
             README.MD
