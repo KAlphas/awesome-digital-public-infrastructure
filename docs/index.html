@@ -9,7 +9,8 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Google Fonts -->
+  <!-- Aino (Brand Estonia typeface) + Inter fallback -->
+  <link href="https://fonts.cdnfonts.com/css/malo-aino-free" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -26,7 +27,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Malo Aino Free', 'Inter', sans-serif;
       background: var(--light);
       color: var(--text);
       line-height: 1.6;
@@ -88,6 +89,24 @@
     .stat { text-align: center; }
     .stat strong { display: block; font-size: 1.8rem; font-weight: 700; color: var(--blue); }
     .stat span { font-size: 0.85rem; color: var(--muted); }
+
+    /* ── FEATURED RESOURCE ─────────────────────────── */
+    .featured {
+      background: linear-gradient(90deg, #e8f0fe, #e6f4ea);
+      border-left: 4px solid var(--blue);
+      max-width: 960px;
+      margin: 24px auto 0;
+      padding: 16px 24px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.92rem;
+    }
+    .featured i { color: var(--blue); font-size: 1.1rem; flex-shrink: 0; }
+    .featured strong { color: var(--dark); }
+    .featured a { color: var(--blue); text-decoration: none; font-weight: 600; }
+    .featured a:hover { text-decoration: underline; }
 
     /* ── MAIN ──────────────────────────────────────── */
     main {
@@ -249,6 +268,17 @@
     <div class="stat"><strong>50+</strong><span>Countries building DPI</span></div>
     <div class="stat"><strong>3</strong><span>Country deep-dives</span></div>
     <div class="stat"><strong>8</strong><span>Domains covered</span></div>
+  </div>
+</div>
+
+<!-- ── FEATURED RESOURCE ─────────────────────────────── -->
+<div class="featured">
+  <i class="fa-solid fa-star"></i>
+  <div>
+    <strong>New:</strong>
+    <a href="https://documents1.worldbank.org/curated/en/099031025172027713/pdf/P505739-84c5073b-9d40-4b83-a211-98b2263e87dd.pdf"
+       target="_blank" rel="noopener">Digital Public Infrastructure and Development: A World Bank Group Approach</a>
+    — Digital Transformation White Paper Vol. 1, World Bank (2025)
   </div>
 </div>
 
