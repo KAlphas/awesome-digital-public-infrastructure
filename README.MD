@@ -175,6 +175,8 @@ Software certified by the [Digital Public Goods Alliance](https://digitalpublicg
 
 Real country implementations with detailed profiles on what they built, what worked, and what didn't.
 
+> 🗺️ **[Explore the DPI Map](https://dpimap.org/)** — UCL IIPP interactive map tracking national DPI across 190+ countries: 68 with Digital ID, 99 with Digital Payments, 103 with Data Exchange systems.
+
 | Country | Population | What they built | Profile |
 |---------|------------|----------------|---------|
 | 🇮🇳 India | 1.4B | Aadhaar, UPI, ONDC, DigiLocker, ABDM | [India](docs/country-profiles/india.md) |
